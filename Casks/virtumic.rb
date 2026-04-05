@@ -1,6 +1,6 @@
 cask "virtumic" do
-  version "0.2.2"
-  sha256 "f2b5125a6fb4e19f52c5c5185ceb8912fdb4a551316ce814b2e901591523a44c"
+  version "0.3.0"
+  sha256 "30a3ef77edca6dda5a30bc5d94e36ab760acdc209ab076af09179336502c61dd"
 
   url "https://github.com/ShotgunZZ/VirtuMic/releases/download/v#{version}/VirtuMic.zip"
   name "VirtuMic"
