@@ -1,6 +1,6 @@
 cask "virtumic" do
   version "0.1.0"
-  sha256 "4402388e105b05547a63f4110bc4ca3d79825915461eb2918c00b748f79e756f"
+  sha256 "3c0412fb33d7f111aab546ec40986546c92ed22826b6e1e4edc357a07e9dd26d"
 
   url "https://github.com/ShotgunZZ/VirtuMic/releases/download/v#{version}/VirtuMic.zip"
   name "VirtuMic"
@@ -17,5 +17,5 @@ cask "virtumic" do
     system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/VirtuMic.app"]
   end
 
-  uninstall quit: "com.virtumic.app"
+  uninstall quit: "com.shotgunzz.virtumic"
 end
