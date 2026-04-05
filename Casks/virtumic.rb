@@ -11,19 +11,11 @@ cask "virtumic" do
 
   app "VirtuMic.app"
 
-  postflight do
-    system_command "#{appdir}/VirtuMic.app/Contents/MacOS/setup.sh"
-  end
+  depends_on cask: "blackhole-2ch"
 
   uninstall quit: "com.virtumic.app"
 
   caveats <<~EOS
-    VirtuMic requires BlackHole 2ch virtual audio driver.
-    The installer will attempt to set it up automatically.
-
-    If BlackHole is not installed, run:
-      brew install blackhole-2ch
-
     VirtuMic is unsigned. On first launch, right-click the app → Open.
   EOS
 end
