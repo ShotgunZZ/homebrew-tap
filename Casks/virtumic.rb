@@ -13,9 +13,9 @@ cask "virtumic" do
 
   depends_on cask: "blackhole-2ch"
 
-  uninstall quit: "com.virtumic.app"
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/VirtuMic.app"]
+  end
 
-  caveats <<~EOS
-    VirtuMic is unsigned. On first launch, right-click the app → Open.
-  EOS
+  uninstall quit: "com.virtumic.app"
 end
